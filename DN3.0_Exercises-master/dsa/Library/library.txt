@@ -1,0 +1,8 @@
+Time Complexity Comparison:
+
+Linear Search: O(n) - The time taken increases linearly with the number of elements. Suitable for small or unsorted datasets.
+Binary Search: O(log n) - The time taken increases logarithmically with the number of elements, making it much faster for large datasets. However, it requires the data to be sorted beforehand.
+When to Use Each Algorithm:
+
+Linear Search: Use when the dataset is small or unsorted. Also suitable if you need to search for books by attributes other than title.
+Binary Search: Use when the dataset is large and sorted by title. This is more efficient in these cases but requires sorting the data beforehand, which takes additional time (O(n log n) for most sorting algorithms).

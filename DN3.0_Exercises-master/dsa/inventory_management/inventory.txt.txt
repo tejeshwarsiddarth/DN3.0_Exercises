@@ -1,0 +1,11 @@
+Time Complexity Analysis
+Add Operation:
+Time Complexity: O(1) on average (due to hash table).
+Update Operation:
+Time Complexity: O(1) on average (direct access via hash table and updating attributes).
+Delete Operation:
+Time Complexity: O(1) on average (removal from hash table).
+Optimization Discussion
+Efficient Hash Function: Ensure the hash function distributes products uniformly to minimize collisions.
+Load Factor Management: Monitor the load factor of the hash table and resize it when necessary to maintain O(1) performance.
+Lazy Deletion: Implement lazy deletion to handle deletion in constant time without immediate rehashing, deferring the cleanup to a later time.

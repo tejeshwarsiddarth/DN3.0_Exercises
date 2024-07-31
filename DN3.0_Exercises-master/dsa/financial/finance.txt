@@ -1,0 +1,14 @@
+Time Complexity:
+
+The time complexity of the recursive function calculateFutureValue is 
+𝑂
+(
+𝑛
+)
+O(n), where 
+𝑛
+n is the number of periods. This is because the function is called recursively once per period.
+Optimization:
+
+Memoization: Store previously computed values to avoid redundant calculations. This technique helps reduce the time complexity significantly.
+Iterative Approach: For this specific problem, an iterative approach might be more efficient since each step only requires a constant amount of work.

@@ -1,0 +1,152 @@
+Bubble Sort
+Description: A simple comparison-based algorithm where each pair of adjacent elements is compared, and the elements are swapped if they are in the wrong order. This process repeats until no more swaps are needed.
+Time Complexity:
+Best Case: 
+𝑂
+(
+𝑛
+)
+O(n)
+Average and Worst Case: 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ )
+Space Complexity: 
+𝑂
+(
+1
+)
+O(1) (in-place)
+Insertion Sort
+Description: Builds the final sorted array one item at a time. It takes each element from the input and finds the appropriate position within the already sorted part.
+Time Complexity:
+Best Case: 
+𝑂
+(
+𝑛
+)
+O(n)
+Average and Worst Case: 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ )
+Space Complexity: 
+𝑂
+(
+1
+)
+O(1) (in-place)
+Quick Sort
+Description: A divide-and-conquer algorithm. It selects a 'pivot' element and partitions the array into two sub-arrays: elements less than the pivot and elements greater than the pivot. It then recursively sorts the sub-arrays.
+Time Complexity:
+Best Case and Average Case: 
+𝑂
+(
+𝑛
+log
+⁡
+𝑛
+)
+O(nlogn)
+Worst Case: 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ )
+Space Complexity: 
+𝑂
+(
+log
+⁡
+𝑛
+)
+O(logn) (in-place, average case)
+Merge Sort
+Description: Another divide-and-conquer algorithm that splits the array into halves, recursively sorts each half, and then merges the sorted halves.
+Time Complexity:
+Best, Average, and Worst Case: 
+𝑂
+(
+𝑛
+log
+⁡
+𝑛
+)
+O(nlogn)
+Space Complexity: 
+𝑂
+(
+𝑛
+)
+O(n) (not in-place)
+
+Performance Comparison
+Bubble Sort:
+Best Case: 
+𝑂
+(
+𝑛
+)
+O(n) when the array is already sorted.
+Worst and Average Case: 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ ), as it needs to compare and possibly swap every pair of elements.
+Quick Sort:
+Best and Average Case: 
+𝑂
+(
+𝑛
+log
+⁡
+𝑛
+)
+O(nlogn), due to the divide-and-conquer approach.
+Worst Case: 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ ), but this is rare and can be mitigated with good pivot selection strategies (e.g., choosing the median).
+Why Quick Sort is Preferred Over Bubble Sort
+Efficiency: Quick Sort generally performs better with an average time complexity of 
+𝑂
+(
+𝑛
+log
+⁡
+𝑛
+)
+O(nlogn) compared to Bubble Sort's 
+𝑂
+(
+𝑛
+2
+)
+O(n 
+2
+ ).
+Scalability: Quick Sort is more scalable for large datasets, while Bubble Sort becomes impractically slow.
+Memory Usage: Both can be implemented as in-place sorts, but Quick Sort's recursive nature can make better use of memory for sorting large lists.

@@ -1,0 +1,34 @@
+Add Operation: 
+𝑂
+(
+1
+)
+O(1) – Adding an employee is constant time if there's space in the array.
+Search Operation: 
+𝑂
+(
+𝑛
+)
+O(n) – Searching through the array requires a linear scan, where 
+𝑛
+n is the number of employees.
+Traverse Operation: 
+𝑂
+(
+𝑛
+)
+O(n) – Traversing the array to print all employees is linear with respect to the number of employees.
+Delete Operation: 
+𝑂
+(
+𝑛
+)
+O(n) – Deleting an employee involves finding the employee (linear search) and then shifting elements, making it linear time.
+Limitations of Arrays:
+
+Fixed Size: Arrays have a fixed size, which means once the array is full, you cannot add more elements without creating a new, larger array and copying elements over.
+Inefficient Deletions: Deleting elements requires shifting other elements to fill the gap, which can be inefficient.
+Search Time: Linear search is required for finding elements, which can be slow for large arrays.
+When to Use Arrays:
+
+Arrays are useful when you have a known, fixed number of elements and you need fast, indexed access. For more dynamic and flexible data structures, consider using collections like ArrayList or HashMap.
