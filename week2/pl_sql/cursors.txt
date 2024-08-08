@@ -1,0 +1,47 @@
+Question: Write a PL/SQL block using an explicit cursor GenerateMonthlyStatements that retrieves all transactions for the current month 
+and prints a statement for each customer.
+
+DECLARE
+    CURSOR c_transactions IS
+        SELECT AccountID, Amount, TransactionDate FROM Transactions
+        WHERE EXTRACT(MONTH FROM TransactionDate) = EXTRACT(MONTH FROM SYSDATE)
+          AND EXTRACT(YEAR FROM TransactionDate) = EXTRACT(YEAR FROM SYSDATE);
+BEGIN
+    FOR rec IN c_transactions LOOP
+        DBMS_OUTPUT.PUT_LINE('Statement for Account ' || rec.AccountID || ': Transaction Amount ' || rec.Amount || ' on ' || rec.TransactionDate);
+    END LOOP;
+END;
+/
+
+
+Question: Write a PL/SQL block using an explicit cursor ApplyAnnualFee that deducts an annual maintenance fee from the balance of all accounts.
+
+DECLARE
+    CURSOR c_accounts IS
+        SELECT AccountID, Balance FROM Accounts;
+BEGIN
+    FOR rec IN c_accounts LOOP
+        UPDATE Accounts
+        SET Balance = Balance - 50 -- Assuming a $50 annual fee
+        WHERE AccountID = rec.AccountID;
+    END LOOP;
+    COMMIT;
+END;
+/
+
+
+Question: Write a PL/SQL block using an explicit cursor UpdateLoanInterestRates that fetches all loans and updates their interest rates 
+based on the new policy.
+
+DECLARE
+    CURSOR c_loans IS
+        SELECT LoanID, InterestRate FROM Loans;
+BEGIN
+    FOR rec IN c_loans LOOP
+        UPDATE Loans
+        SET InterestRate = InterestRate + 0.5 -- Assuming a 0.5% increase
+        WHERE LoanID = rec.LoanID;
+    END LOOP;
+    COMMIT;
+END;
+/
